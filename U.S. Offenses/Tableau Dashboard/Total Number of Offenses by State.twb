@@ -1,0 +1,923 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20221.22.0401.1746                               -->
+<workbook source-build='2021.3.8 (20213.22.0213.1115)' source-platform='mac' version='18.1' xml:base='https://prod-useast-a.online.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='TotalNumberofOffensesbyState' path='/t/hackathonapril16/workbooks' revision='1.0' site='hackathonapril16' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='BigQuery' inline='true' name='federated.0pb2w2z1tr55ht15fuzlv0qnhtr6' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='BigQuery' name='bigquery.1xhipdh0a4hcf31ef88uk12a0wni'>
+            <connection CATALOG='empyrean-aurora-347520' EXECCATALOG='empyrean-aurora-347520' authentication='oauth' class='bigquery' connection-dialect='google-sql' project='My First Project' schema='hackathon_april16' server-oauth='server-custom' username='amansunil97@gmail.com' workgroup-auth-mode='prompt' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='bigquery.1xhipdh0a4hcf31ef88uk12a0wni' name='Cleaned Data' table='[empyrean-aurora-347520.hackathon_april16].[Cleaned Data]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='bigquery.1xhipdh0a4hcf31ef88uk12a0wni' name='Cleaned Data' table='[empyrean-aurora-347520.hackathon_april16].[Cleaned Data]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>int64_field_0</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[int64_field_0]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>int64_field_0</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>State</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Agency_Type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Agency_Type]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Agency_Type</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Agency_Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Agency_Name]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Agency_Name</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Population</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Population]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Population</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Assault_Offenses</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Assault_Offenses]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Assault_Offenses</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Aggravated_Assault</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Aggravated_Assault]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Aggravated_Assault</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Simple_Assault</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Simple_Assault]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Simple_Assault</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Intimidation</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Intimidation]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Intimidation</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Homicide_Offenses</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Homicide_Offenses]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Homicide_Offenses</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Murder_and_Nonnegligent_Manslaughter</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Murder_and_Nonnegligent_Manslaughter]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Murder_and_Nonnegligent_Manslaughter</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Kidnapping_Abduction</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Kidnapping_Abduction]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Kidnapping_Abduction</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sex_Offenses</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Sex_Offenses]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Sex_Offenses</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rape</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Rape]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Rape</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sodomy</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Sodomy]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Sodomy</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sexual_Assault_With_An_Object</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Sexual_Assault_With_An_Object]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Sexual_Assault_With_An_Object</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fondling</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Fondling]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Fondling</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sex_Offenses__Nonforcible</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Sex_Offenses__Nonforcible]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Sex_Offenses__Nonforcible</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Statutory_Rape</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Statutory_Rape]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Statutory_Rape</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Arson</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Arson]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Arson</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Burglary_Breaking___Entering</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Burglary_Breaking___Entering]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Burglary_Breaking___Entering</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Counter_feiting_Forgery</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Counter_feiting_Forgery]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Counter_feiting_Forgery</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Destruction_Damage_Vandalism</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Destruction_Damage_Vandalism]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Destruction_Damage_Vandalism</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Embezzle_ment</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Embezzle_ment]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Embezzle_ment</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fraud_Offenses</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Fraud_Offenses]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Fraud_Offenses</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>False_Pretenses_Swindle_Confidence_Game</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[False_Pretenses_Swindle_Confidence_Game]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>False_Pretenses_Swindle_Confidence_Game</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Credit_Card_Automated_Teller_Machine_Fraud</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Credit_Card_Automated_Teller_Machine_Fraud]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Credit_Card_Automated_Teller_Machine_Fraud</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Impersonation</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Impersonation]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Impersonation</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Wire_Fraud</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Wire_Fraud]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Wire_Fraud</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Larceny_Theft_Offenses</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Larceny_Theft_Offenses]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Larceny_Theft_Offenses</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pocket_picking</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Pocket_picking]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Pocket_picking</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Purse_snatching</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Purse_snatching]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Purse_snatching</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Shop_lifting</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Shop_lifting]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Shop_lifting</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Theft_From_Building</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Theft_From_Building]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Theft_From_Building</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Theft_From_Coin_operated_Machine</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Theft_From_Coin_operated_Machine]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Theft_From_Coin_operated_Machine</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Theft_From_Motor_Vehicle</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Theft_From_Motor_Vehicle]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Theft_From_Motor_Vehicle</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Theft_of_Motor_Vehicle_Parts_or_Accessories</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Theft_of_Motor_Vehicle_Parts_or_Accessories]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Theft_of_Motor_Vehicle_Parts_or_Accessories</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>All_Other_Larceny</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[All_Other_Larceny]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>All_Other_Larceny</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Motor_Vehicle_Theft</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Motor_Vehicle_Theft]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Motor_Vehicle_Theft</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Robbery</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Robbery]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Robbery</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stolen_Property_Offenses_</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Stolen_Property_Offenses_]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Stolen_Property_Offenses_</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Drug_Narcotic_Offenses</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Drug_Narcotic_Offenses]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Drug_Narcotic_Offenses</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Drug_Narcotic_Violations</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Drug_Narcotic_Violations]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Drug_Narcotic_Violations</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Drug_Equipment_Violations</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Drug_Equipment_Violations]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Drug_Equipment_Violations</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pornography_Obscene_Material</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Pornography_Obscene_Material]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Pornography_Obscene_Material</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Prost_itution_Offenses</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Prost_itution_Offenses]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Prost_itution_Offenses</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Prostitution</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Prostitution]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Prostitution</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Weapon_Law_Violations</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Weapon_Law_Violations]</local-name>
+            <parent-name>[Cleaned Data]</parent-name>
+            <remote-alias>Weapon_Law_Violations</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Agency Name' datatype='string' name='[Agency_Name]' role='dimension' type='nominal' />
+      <column caption='Agency Type' datatype='string' name='[Agency_Type]' role='dimension' type='nominal' />
+      <column caption='Aggravated Assault' datatype='integer' name='[Aggravated_Assault]' role='measure' type='quantitative' />
+      <column caption='All Other Larceny' datatype='integer' name='[All_Other_Larceny]' role='measure' type='quantitative' />
+      <column caption='Assault Offenses' datatype='integer' name='[Assault_Offenses]' role='measure' type='quantitative' />
+      <column caption='Counter feiting Forgery' datatype='integer' name='[Counter_feiting_Forgery]' role='measure' type='quantitative' />
+      <column caption='Credit Card Automated Teller Machine Fraud' datatype='integer' name='[Credit_Card_Automated_Teller_Machine_Fraud]' role='measure' type='quantitative' />
+      <column caption='Destruction Damage Vandalism' datatype='integer' name='[Destruction_Damage_Vandalism]' role='measure' type='quantitative' />
+      <column caption='Drug Equipment Violations' datatype='integer' name='[Drug_Equipment_Violations]' role='measure' type='quantitative' />
+      <column caption='Drug Narcotic Offenses' datatype='integer' name='[Drug_Narcotic_Offenses]' role='measure' type='quantitative' />
+      <column caption='Drug Narcotic Violations' datatype='integer' name='[Drug_Narcotic_Violations]' role='measure' type='quantitative' />
+      <column caption='Embezzle ment' datatype='integer' name='[Embezzle_ment]' role='measure' type='quantitative' />
+      <column caption='False Pretenses Swindle Confidence Game' datatype='integer' name='[False_Pretenses_Swindle_Confidence_Game]' role='measure' type='quantitative' />
+      <column caption='Fraud Offenses' datatype='integer' name='[Fraud_Offenses]' role='measure' type='quantitative' />
+      <column caption='Homicide Offenses' datatype='integer' name='[Homicide_Offenses]' role='measure' type='quantitative' />
+      <column caption='Kidnapping Abduction' datatype='integer' name='[Kidnapping_Abduction]' role='measure' type='quantitative' />
+      <column caption='Larceny Theft Offenses' datatype='integer' name='[Larceny_Theft_Offenses]' role='measure' type='quantitative' />
+      <column caption='Motor Vehicle Theft' datatype='integer' name='[Motor_Vehicle_Theft]' role='measure' type='quantitative' />
+      <column caption='Murder and Nonnegligent Manslaughter' datatype='integer' name='[Murder_and_Nonnegligent_Manslaughter]' role='measure' type='quantitative' />
+      <column caption='Pocket picking' datatype='integer' name='[Pocket_picking]' role='measure' type='quantitative' />
+      <column caption='Pornography Obscene Material' datatype='integer' name='[Pornography_Obscene_Material]' role='measure' type='quantitative' />
+      <column caption='Prost itution Offenses' datatype='integer' name='[Prost_itution_Offenses]' role='measure' type='quantitative' />
+      <column caption='Purse snatching' datatype='integer' name='[Purse_snatching]' role='measure' type='quantitative' />
+      <column caption='Sex Offenses' datatype='integer' name='[Sex_Offenses]' role='measure' type='quantitative' />
+      <column caption='Sexual Assault With An Object' datatype='integer' name='[Sexual_Assault_With_An_Object]' role='measure' type='quantitative' />
+      <column caption='Shop lifting' datatype='integer' name='[Shop_lifting]' role='measure' type='quantitative' />
+      <column caption='Simple Assault' datatype='integer' name='[Simple_Assault]' role='measure' type='quantitative' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Statutory Rape' datatype='integer' name='[Statutory_Rape]' role='measure' type='quantitative' />
+      <column caption='Stolen Property Offenses' datatype='integer' name='[Stolen_Property_Offenses_]' role='measure' type='quantitative' />
+      <column caption='Theft From Building' datatype='integer' name='[Theft_From_Building]' role='measure' type='quantitative' />
+      <column caption='Theft From Coin operated Machine' datatype='integer' name='[Theft_From_Coin_operated_Machine]' role='measure' type='quantitative' />
+      <column caption='Theft From Motor Vehicle' datatype='integer' name='[Theft_From_Motor_Vehicle]' role='measure' type='quantitative' />
+      <column caption='Theft of Motor Vehicle Parts or Accessories' datatype='integer' name='[Theft_of_Motor_Vehicle_Parts_or_Accessories]' role='measure' type='quantitative' />
+      <column caption='Weapon Law Violations' datatype='integer' name='[Weapon_Law_Violations]' role='measure' type='quantitative' />
+      <column caption='Wire Fraud' datatype='integer' name='[Wire_Fraud]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Cleaned Data' datatype='table' name='[__tableau_internal_object_id__].[Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD]' role='measure' type='quantitative' />
+      <column caption='Int64 Field 0' datatype='integer' name='[int64_field_0]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Cleaned Data' id='Cleaned Data_10D4C642BA814755AB3C52C440DAD0BD'>
+            <properties context=''>
+              <relation connection='bigquery.1xhipdh0a4hcf31ef88uk12a0wni' name='Cleaned Data' table='[empyrean-aurora-347520.hackathon_april16].[Cleaned Data]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <repository-location id='Sheet1' path='/t/hackathonapril16/workbooks/TotalNumberofOffensesbyState' revision='' site='hackathonapril16' />
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Total Number of Offenses by State</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='BigQuery' name='federated.0pb2w2z1tr55ht15fuzlv0qnhtr6' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0pb2w2z1tr55ht15fuzlv0qnhtr6'>
+            <column caption='Aggravated Assault' datatype='integer' name='[Aggravated_Assault]' role='measure' type='quantitative' />
+            <column caption='All Other Larceny' datatype='integer' name='[All_Other_Larceny]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Arson]' role='measure' type='quantitative' />
+            <column caption='Assault Offenses' datatype='integer' name='[Assault_Offenses]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Burglary_Breaking___Entering]' role='measure' type='quantitative' />
+            <column caption='Counter feiting Forgery' datatype='integer' name='[Counter_feiting_Forgery]' role='measure' type='quantitative' />
+            <column caption='Credit Card Automated Teller Machine Fraud' datatype='integer' name='[Credit_Card_Automated_Teller_Machine_Fraud]' role='measure' type='quantitative' />
+            <column caption='Destruction Damage Vandalism' datatype='integer' name='[Destruction_Damage_Vandalism]' role='measure' type='quantitative' />
+            <column caption='Drug Equipment Violations' datatype='integer' name='[Drug_Equipment_Violations]' role='measure' type='quantitative' />
+            <column caption='Drug Narcotic Offenses' datatype='integer' name='[Drug_Narcotic_Offenses]' role='measure' type='quantitative' />
+            <column caption='Drug Narcotic Violations' datatype='integer' name='[Drug_Narcotic_Violations]' role='measure' type='quantitative' />
+            <column caption='Embezzle ment' datatype='integer' name='[Embezzle_ment]' role='measure' type='quantitative' />
+            <column caption='False Pretenses Swindle Confidence Game' datatype='integer' name='[False_Pretenses_Swindle_Confidence_Game]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Fondling]' role='measure' type='quantitative' />
+            <column caption='Fraud Offenses' datatype='integer' name='[Fraud_Offenses]' role='measure' type='quantitative' />
+            <column caption='Homicide Offenses' datatype='integer' name='[Homicide_Offenses]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Impersonation]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Intimidation]' role='measure' type='quantitative' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column caption='Int64 Field 0' datatype='integer' name='[int64_field_0]' role='measure' type='quantitative' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Aggravated_Assault]' derivation='Sum' name='[sum:Aggravated_Assault:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[All_Other_Larceny]' derivation='Sum' name='[sum:All_Other_Larceny:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Arson]' derivation='Sum' name='[sum:Arson:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Assault_Offenses]' derivation='Sum' name='[sum:Assault_Offenses:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Burglary_Breaking___Entering]' derivation='Sum' name='[sum:Burglary_Breaking___Entering:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Counter_feiting_Forgery]' derivation='Sum' name='[sum:Counter_feiting_Forgery:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Credit_Card_Automated_Teller_Machine_Fraud]' derivation='Sum' name='[sum:Credit_Card_Automated_Teller_Machine_Fraud:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Destruction_Damage_Vandalism]' derivation='Sum' name='[sum:Destruction_Damage_Vandalism:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Drug_Equipment_Violations]' derivation='Sum' name='[sum:Drug_Equipment_Violations:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Drug_Narcotic_Offenses]' derivation='Sum' name='[sum:Drug_Narcotic_Offenses:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Drug_Narcotic_Violations]' derivation='Sum' name='[sum:Drug_Narcotic_Violations:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Embezzle_ment]' derivation='Sum' name='[sum:Embezzle_ment:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[False_Pretenses_Swindle_Confidence_Game]' derivation='Sum' name='[sum:False_Pretenses_Swindle_Confidence_Game:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Fondling]' derivation='Sum' name='[sum:Fondling:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Fraud_Offenses]' derivation='Sum' name='[sum:Fraud_Offenses:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Homicide_Offenses]' derivation='Sum' name='[sum:Homicide_Offenses:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Impersonation]' derivation='Sum' name='[sum:Impersonation:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Intimidation]' derivation='Sum' name='[sum:Intimidation:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[int64_field_0]' derivation='Sum' name='[sum:int64_field_0:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[sum:Aggravated_Assault:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[sum:All_Other_Larceny:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[sum:Arson:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[sum:Assault_Offenses:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[sum:Burglary_Breaking___Entering:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[sum:Counter_feiting_Forgery:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[sum:Credit_Card_Automated_Teller_Machine_Fraud:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[sum:Destruction_Damage_Vandalism:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[sum:Drug_Equipment_Violations:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[sum:Drug_Narcotic_Offenses:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[sum:Drug_Narcotic_Violations:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[sum:Embezzle_ment:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[sum:False_Pretenses_Swindle_Confidence_Game:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[sum:Fondling:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[sum:Fraud_Offenses:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[sum:Homicide_Offenses:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[sum:Impersonation:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[sum:int64_field_0:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[sum:Intimidation:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[none:State:nk]' />
+              <size column='[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[Multiple Values]' />
+              <lod column='[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[:Measure Names]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>State:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[none:State:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Total Number of Offenses : </run>
+                <run bold='true'><![CDATA[<[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[Multiple Values]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+        </panes>
+        <rows>[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[Latitude (generated)]</rows>
+        <cols>[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{61BC4899-011F-4FF5-B931-85A1A4014E6B}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{C639FBC2-4185-4F59-B9BE-8CD6089DDCC7}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <repository-location id='Dashboard1' path='/t/hackathonapril16/workbooks/TotalNumberofOffensesbyState' revision='' site='hackathonapril16' />
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='7' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='5' type-v2='layout-basic' w='82400' x='800' y='1000'>
+              <zone h='98000' id='3' name='Sheet 1' w='82400' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98000' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='16000' x='83200' y='1000'>
+              <zone h='79750' id='8' name='Sheet 1' pane-specification-id='0' param='[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[none:State:nk]' type-v2='color' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='18250' id='9' name='Sheet 1' pane-specification-id='0' param='[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[Multiple Values]' type-v2='size' w='16000' x='83200' y='80750'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='11' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='10' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='98000' id='3' is-fixed='true' name='Sheet 1' w='82400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='79750' id='8' name='Sheet 1' pane-specification-id='0' param='[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[none:State:nk]' type-v2='color' w='16000' x='83200' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='18250' id='9' name='Sheet 1' pane-specification-id='0' param='[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[Multiple Values]' type-v2='size' w='16000' x='83200' y='80750'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{4DFEBAC2-EF29-43FA-AFFF-D27765736190}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[none:State:nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.0pb2w2z1tr55ht15fuzlv0qnhtr6].[Multiple Values]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E0764C4B-681C-4E67-AC53-880CED189955}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{606900E4-34B2-4A7C-94EC-44D8B46CCCFE}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sheet 1'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{9E040539-7A06-4AFF-B010-50D17DB67E3D}' />
+    </window>
+  </windows>
+</workbook>
